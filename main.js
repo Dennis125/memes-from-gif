@@ -39,7 +39,7 @@ const state = {
         if (state.validSearchMeme = false) {
             return;
         }
-        const apiEndPoint = `http://api.giphy.com/v1/gifs/search?api_key=syP7w6LxYPKIJiQ8sP7lH5X7PsMqqAhC&q=${state.searchMeme}`
+        const apiEndPoint = `https://api.giphy.com/v1/gifs/search?api_key=syP7w6LxYPKIJiQ8sP7lH5X7PsMqqAhC&q=${state.searchMeme}`
             const start = Date.now();
         return vanillaGet(apiEndPoint).then(data => {
             state.memes = [];
@@ -136,7 +136,7 @@ randBtn.addEventListener('click', e => {
 
 funnyBtn.addEventListener('click', e => {
 	udateStateAndRedraw(() => {
-		state.setSearchMemes('funny');
+		state.setSearchMemes('Funny');
 		state.refreshMemes();
 	})
 })
