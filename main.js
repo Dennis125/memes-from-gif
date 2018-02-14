@@ -35,7 +35,7 @@ const state = {
         state.searchMeme = meme;
     },
 
-    refreshMemes: (memes) => {
+    refreshMemes: (meme) => {
         if (state.validSearchMeme = false) {
             return;
         }
@@ -117,6 +117,9 @@ const onKeyPressed = e =>{
 }
 inPuMemes.addEventListener('keypress', onKeyPressed);
 
+// send the inpute value to state function object function setSearchMemes to
+// validate and set the searchMeme to a string value.
+// than go to through the render.
 srchBtn.addEventListener('click', e => {
   const valu = inPuMemes.value;
 udateStateAndRedraw(()=>{
@@ -124,39 +127,33 @@ udateStateAndRedraw(()=>{
   });
 });
 
-
 randBtn.addEventListener('click', e => {
-udateStateAndRedraw(()=>{
-    state.searchMeme('random');
-  });
-});
-
+	udateStateAndRedraw(() => {
+		state.setSearchMemes('random');
+		state.refreshMemes();
+	})
+})
 
 funnyBtn.addEventListener('click', e => {
-udateStateAndRedraw(()=>{
-    state.searchMeme();
-    state.refreshMemes()
-  });
-});
-
+	udateStateAndRedraw(() => {
+		state.setSearchMemes('funny');
+		state.refreshMemes();
+	})
+})
 
 catsBtn.addEventListener('click', e => {
-udateStateAndRedraw(()=>{
-    state.searchMeme();
-    state.refreshMemes()
-  });
-});
-
+	udateStateAndRedraw(() => {
+		state.setSearchMemes('cats');
+		state.refreshMemes();
+	})
+})
 
 failBtn.addEventListener('click', e => {
-udateStateAndRedraw(()=>{
-    state.searchMeme('fails');
-
-    state.refreshMemes()
-  });
-});
-
-
+	udateStateAndRedraw(() => {
+		state.setSearchMemes('fails');
+		state.refreshMemes();
+	})
+})
 
 
 
