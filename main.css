@@ -1,0 +1,44 @@
+body{
+  background: url("/Users/tulawilson/Desktop/memesearchengine/picturs/cats.jpg");
+  background-repeat: no-repeat;
+background-size: cover;
+}
+.hed{
+  color: black;
+  text-align: center;
+}
+.js-cats-btn{
+margin-right-btn:30px;
+
+}
+.js-funny-btn{
+margin-right:30px;
+}
+.js-cats-btn{
+margin-right:30px;
+}
+.js-fails-btn{
+margin-right:30px;
+}
+.js-random-btn{
+  margin-right:30px;
+}
+#loading {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 3px solid rgba(0,0,0,.3);
+  border-radius: 50%;
+  border-top-color: #000;
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
+}
